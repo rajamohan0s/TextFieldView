@@ -197,16 +197,6 @@ open class TextFieldView: UIView, UITextFieldDelegate {
         self.constrainFieldBottomAnchor.isActive = true
     }
     
-    open func becomeFirstResponder() {
-        
-        self.textField.becomeFirstResponder()
-    }
-    
-    open func resignFirstResponder() {
-        
-        self.textField.resignFirstResponder()
-    }
-   
     open func validate(_ string: String?) {
         
         do {
