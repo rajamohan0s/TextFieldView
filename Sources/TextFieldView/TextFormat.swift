@@ -104,7 +104,7 @@ public enum TextFormat: String{
             
         case .password:
                 
-            guard text.count > 5 && text.contains(cases: .uppercase, .lowercase, .number) else {
+            guard (text.count > 5 && text.count <= 16) && text.contains(cases: .uppercase, .lowercase, .number) else {
                 
                 throw self.validationError(for: .week)
             }
