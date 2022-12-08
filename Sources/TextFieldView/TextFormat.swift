@@ -7,7 +7,6 @@
 //
 //	Website: https://rajamohan0s.github.io/
 //
- 
 
 import UIKit
 
@@ -17,6 +16,44 @@ public enum TextFormat: String{
     case password = "Password"
     case ingore
    
+    public var keyboardType: UIKeyboardType {
+        
+        switch self {
+        case .email:
+            return .emailAddress
+        case .password:
+            return .asciiCapable
+        case .ingore:
+            return .default
+        }
+    }
+    
+    public var isSecureTextEntry: Bool { self == .password }
+     
+    
+    public var hasAutocorrection: Bool {
+        
+        switch self {
+        case .email, .password:
+            return false
+            
+        default:
+            return true
+        }
+    }
+    
+    public var autoCapitalizationType: UITextAutocapitalizationType {
+        
+        switch self {
+            
+        case .email, .password:
+            return .none
+            
+        default:
+            return .words
+        }
+    }
+    
     private func validationError(for option: ValidationError) -> ErrorValue {
         
         switch option {

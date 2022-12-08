@@ -7,7 +7,7 @@
 //
 //	Website: https://rajamohan0s.github.io/
 //
- 
+
 import UIKit
 
 // MARK: TextFieldViewDelegate
@@ -45,7 +45,14 @@ open class TextFieldView: UIView, UITextFieldDelegate {
         
         set {
             
-            self._textFormat = .init(rawValue: newValue)!
+            let format: TextFormat = .init(rawValue: newValue)!
+            
+            self.textField.keyboardType = format.keyboardType
+            self.textField.isSecureTextEntry = format.isSecureTextEntry
+            self.textField.autocorrectionType = format.hasAutocorrection ? .yes : .no
+            self.textField.autocapitalizationType = format.autoCapitalizationType
+
+            self._textFormat = format
         }
         
         get {

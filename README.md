@@ -2,8 +2,8 @@
 TextFieldView with Error and Title labels. Currently It'll be used with storyboard only.
 
 ## Demo 
-### **Preview:** 
-![Preview Gif](https://rajamohan0s.github.io/Previews/TextFieldView.gif)
+### **Yotube Preview:** 
+[![Alt text](https://rajamohan0s.github.io/Previews/TextFieldView.png)](https://www.youtube.com/shorts/W11yWiM0h7c)
 
 ### **Code:**
 ```swift
